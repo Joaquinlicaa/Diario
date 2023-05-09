@@ -1,0 +1,274 @@
+/*npm run watch-css*/
+/*Variables*/
+* {
+  margin: 0;
+  padding: 0; }
+
+/*ejemplo1*/
+.h1-ejemplo1 {
+  padding: 10px; }
+
+#carouselExampleCaptions {
+  padding: 10px;
+  width: 1000px; }
+
+/*ejemplo 2*/
+.div-noticias2 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px; }
+  .div-noticias2 .img {
+    width: 550px;
+    height: 350px; }
+  .div-noticias2 .p {
+    font-size: 22px; }
+  .div-noticias2 .small {
+    font-size: 15px;
+    color: #000; }
+
+.navbar-toggler:hover {
+  transform: scale(1);
+  border: lightblue 5px solid; }
+
+.nav-link:hover {
+  transform: scale(1, 1);
+  background-color: darkblue; }
+
+.header {
+  min-height: 20vh; }
+
+/*Body*/
+main {
+  min-height: 70vh;
+  padding: 10px; }
+  main h1 {
+    text-align: center;
+    color: blue; }
+  main hr {
+    width: 100%;
+    border: 3px solid #000; }
+  main .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Grid1 Grid2 . ."
+ "Grid3 Grid4 Grid5 ."
+ ". . . ."; }
+  main .grid-1 {
+    grid-area: Grid1; }
+  main .grid-2 {
+    grid-area: Grid2; }
+  main .grid-3 {
+    grid-area: Grid3; }
+  main .grid-4 {
+    grid-area: Grid4; }
+  main .grid-5 {
+    grid-area: Grid5; }
+  main .container div {
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold; }
+  main .primerafila {
+    width: 450px;
+    height: 300px; }
+  main .segundafila {
+    width: 300px;
+    height: 200px; }
+  main .grid-1 img {
+    width: 350px;
+    height: 250px; }
+  main .grid-2 img {
+    width: 350px;
+    height: 250px; }
+  main .grid-1 a {
+    text-decoration: none;
+    color: #000; }
+  main .grid-2 a {
+    text-decoration: none;
+    color: #000; }
+  main .grid-1 {
+    display: flex;
+    flex-direction: column; }
+  main .grid-2 {
+    display: flex;
+    flex-direction: column; }
+  main .grid-3 {
+    display: flex;
+    flex-direction: column; }
+  main .grid-4 {
+    display: flex;
+    flex-direction: column; }
+  main .grid-5 {
+    display: flex;
+    flex-direction: column; }
+  main small {
+    color: darkblue; }
+
+/*Footer*/
+/*Grid*/
+footer {
+  background-color: #000;
+  min-height: 10vh;
+  color: white; }
+  footer .container-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Redes Secciones Form Contacto"
+ "Redes Secciones Form Contacto"
+ "Redes Secciones Form Contacto"; }
+  footer .Secciones {
+    grid-area: Secciones; }
+  footer .Form {
+    grid-area: Form; }
+  footer .Contacto {
+    grid-area: Contacto; }
+  footer .Redes {
+    grid-area: Redes; }
+  footer .img {
+    width: 250px;
+    height: 150px; }
+
+
+/*Area redes*/
+.redes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  color: white; }
+  .redes .tabla {
+    padding: 10px; }
+  .redes .img {
+    height: 40px;
+    width: 40px;
+    padding: 10px; }
+
+/*Area secciones*/
+.secciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap; }
+  .secciones .nav ul {
+    list-style: none;
+    padding: 10px; }
+  .secciones .nav ul a {
+    text-decoration: none;
+    color: white; }
+  .secciones .nav ul li {
+    padding: 10px; }
+  .secciones .p {
+    font-weight: bold;
+    color: white; }
+
+/*Area form*/
+.form {
+  padding: 10px;
+  text-align: center; }
+  .form .p {
+    padding-bottom: 10px;
+    color: white; }
+  .form .mail::placeholder {
+    color: #000; }
+  .form input[type=text]:focus {
+    transform: scale(1, 1);
+    border: 3px solid blue; }
+  .form .button {
+    padding: 15px 25px;
+    font-size: 10px;
+    font-size: 12;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #000;
+    border-color: white;
+    border-radius: 15px; }
+  .form .button:hover {
+    background-color: #000; }
+  .form .button:active {
+    background-color: white;
+    transform: translateY(4px);
+    color: #000; }
+
+/*Area contacto*/
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap; }
+  .contacto .p {
+    font-weight: bold;
+    color: white; }
+  .contacto .a {
+    text-decoration: none;
+    padding: 10px;
+    color: white; }
+
+/*seccion musica*/
+.div-musica {
+  display: flex; }
+  .div-musica .img {
+    width: 600px;
+    height: 400px;
+    padding: 10px; }
+    .div-musica .img:hover {
+      transform: scale(0, 9); }
+  .div-musica .p {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px; }
+
+@media (max-width: 768px) {
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #000; }
+  .container {
+    display: flex;
+    flex-direction: column; }
+  .div {
+    font-size: 16px; }
+  .container img {
+    width: 250px;
+    height: 150px; }
+  .contenedor {
+    display: flex;
+    flex-direction: column; }
+  .contenedor div {
+    font-size: 16px; }
+  .contenedor img {
+    width: 250px;
+    height: 150px; }
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .close {
+    top: 20px;
+    right: 20px; }
+  .div-noticias2 img {
+    width: 250px;
+    height: 150px; }
+  .div-noticias2 p {
+    font-size: 16px; }
+  .div-noticias2 small {
+    font-size: 8px; }
+  .div-musica {
+    flex-direction: column; }
+  .div-musica img {
+    width: 300px;
+    height: 200px; }
+  .div-musica p {
+    font-size: 16px;
+    font-weight: none; } }

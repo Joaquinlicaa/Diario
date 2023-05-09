@@ -1,0 +1,17 @@
+/*ejemplo 2*/
+.div-noticias2{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    .img{
+        width: 550px;
+        height: 350px;
+    }
+    .p{
+        font-size: 22px;
+    }
+    .small{
+        font-size: 15px;
+        color: $negro;
+    }
+}

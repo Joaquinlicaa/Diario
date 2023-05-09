@@ -1,0 +1,319 @@
+
+/*npm run watch-css*/
+@import './recursos/variables.scss';
+@import './recursos/reset';
+@import './recursos/ejemplo1.scss';
+@import './recursos/ejemplo2.scss';
+
+.navbar-toggler:hover{
+    transform: scale(1);
+    border: lightblue 5px solid ;
+}
+.nav-link:hover{
+    transform: scale(1,1);
+    background-color: darkblue;
+}
+.header{
+    min-height: 20vh;
+}
+/*Body*/
+main{
+    min-height: 70vh;
+    padding: 10px;
+    h1{
+        text-align: center;
+        color: blue;
+    }
+    hr{
+        width: 100%;
+        border: 3px solid $negro;
+    }
+    .container{  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "Grid1 Grid2 . ."
+          "Grid3 Grid4 Grid5 ."
+          ". . . .";
+      }
+      .grid-1 { grid-area: Grid1; }
+  
+      .grid-2 { grid-area: Grid2; }
+      
+      .grid-3 { grid-area: Grid3; }
+      
+      .grid-4 { grid-area: Grid4; }
+      
+      .grid-5 { grid-area: Grid5; }
+    
+    .container div{
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    }
+    .primerafila{
+        width: 450px;
+        height: 300px;
+    }
+    .segundafila{
+        width: 300px;
+        height: 200px;
+    }
+    .grid-1 img{
+        width: 350px;
+        height: 250px;
+    }
+    .grid-2 img{
+        width: 350px;
+        height: 250px;
+    }
+    
+    .grid-1 a{
+        text-decoration: none;
+        color: $negro;
+    }
+    .grid-2 a{
+        text-decoration: none;
+        color: $negro;
+    }
+    
+    .grid-1{
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-2{
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-3{
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-4{
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-5{
+        display: flex;
+        flex-direction: column;
+    }
+    small {
+        color: darkblue; }
+      
+
+}
+
+/*Footer*/
+/*Grid*/
+
+footer{
+    background-color: $negro;
+    min-height: 10vh;
+    color: white;
+    .container-footer {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "Redes Secciones Form Contacto"
+          "Redes Secciones Form Contacto"
+          "Redes Secciones Form Contacto";
+      }
+
+    .Secciones { grid-area: Secciones; }
+      
+    .Form { grid-area: Form; }
+      
+    .Contacto { grid-area: Contacto; }
+      
+    .Redes { grid-area: Redes; } .img{
+        width: 250px;
+        height: 150px;
+      }
+}
+/*Elu puto*/
+/*Area redes*/
+.redes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    .tabla{
+        padding: 10px;
+     }
+    .img{
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+    }
+ }
+/*Area secciones*/
+.secciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    .nav ul{
+        list-style: none;
+        padding: 10px;
+    }
+    .nav ul a{
+        text-decoration: none;
+        color: white
+    }
+    .nav ul li{
+        padding: 10px;
+    }
+    .p{
+        font-weight: bold;
+        color: white;
+    }
+}
+/*Area form*/
+
+.form{
+    padding: 10px;
+    text-align: center;
+    .p{
+        padding-bottom: 10px ;
+        color: white;
+    }
+    .mail::placeholder{
+        color: $negro;
+    }
+    input[type=text]:focus {
+        transform: scale(1,1);
+        border: 3px solid blue;
+    }
+    .button{
+        padding: 15px 25px;
+        font-size: 10px;
+        font-size: 12;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: $negro;
+        border-color: white;
+        border-radius: 15px;
+      }
+      
+      .button:hover {background-color: $negro}
+      
+      .button:active {
+        background-color: rgb(255, 255, 255) ;
+        transform: translateY(4px);
+        color: $negro;
+      }
+    
+}
+
+/*Area contacto*/
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    .p{
+        font-weight: bold;
+        color: white;
+    }
+    .a{
+        text-decoration: none;
+        padding: 10px;
+        color: white;
+    
+    }
+}
+
+/*seccion musica*/
+.div-musica{
+    display: flex;
+    .img{
+        width: 600px;
+        height: 400px;
+        padding: 10px;
+        &:hover{
+           transform: scale(0,9);
+        }
+    }
+    .p{
+        font-size: 30px;
+        font-weight: bold;
+        padding: 10px;
+    }
+}
+
+
+@media (max-width:768px){
+    .container-footer {  
+        display: flex;
+        flex-direction: column;
+        background-color: $negro;
+      }
+      .container {  
+        display: flex;
+        flex-direction: column;
+      }
+      .div{
+        font-size: 16px;
+      }
+      .container img{
+        width: 250px;
+        height: 150px;
+      }
+      .contenedor{  
+        display: flex;
+        flex-direction: column;
+      }
+      .contenedor div{
+        font-size: 16px;
+      }
+      .contenedor img{
+        width: 250px;
+        height: 150px;
+      }
+      .galeria{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      .close{
+        top: 20px;
+        right: 20px;
+      }
+    .div-noticias2 img{
+        width: 250px;
+        height: 150px;
+    }
+    .div-noticias2 p{
+        font-size: 16px;
+    }
+    .div-noticias2 small{
+        font-size: 8px;
+    }
+    .div-musica{
+        flex-direction: column;
+    }
+    .div-musica img{
+        width: 300px;
+        height: 200px;
+    }
+    .div-musica p{
+        font-size: 16px;
+        font-weight: none;
+    }
+}
+
+
