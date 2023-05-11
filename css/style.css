@@ -46,7 +46,7 @@ main {
     color: blue; }
   main hr {
     width: 100%;
-    border: 3px solid #000; }
+    border: 3px solid blue; }
   main .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -131,10 +131,6 @@ footer {
 
 .Redes {
   grid-area: Redes; }
-
-img {
-  width: 250px;
-  height: 150px; }
 
 /*Area redes*/
 .redes {
