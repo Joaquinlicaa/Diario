@@ -114,30 +114,30 @@ footer{
     background-color: $negro;
     min-height: 10vh;
     color: white;
-    .container-footer {  
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "Redes Secciones Form Contacto"
-          "Redes Secciones Form Contacto"
-          "Redes Secciones Form Contacto";
-      }
-
-    .Secciones { grid-area: Secciones; }
-      
-    .Form { grid-area: Form; }
-      
-    .Contacto { grid-area: Contacto; }
-      
-    .Redes { grid-area: Redes; } .img{
-        width: 250px;
-        height: 150px;
-      }
 }
-/*Elu puto*/
+.container-footer {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Redes Secciones Form Contacto"
+    "Redes Secciones Form Contacto"
+    "Redes Secciones Form Contacto";
+}
+
+.Secciones { grid-area: Secciones; }
+      
+.Form { grid-area: Form; }
+      
+.Contacto { grid-area: Contacto; }
+      
+.Redes { grid-area: Redes; } 
+img{
+    width: 250px;
+    height: 150px;    
+}
 /*Area redes*/
 .redes{
     display: flex;
@@ -147,15 +147,15 @@ footer{
     align-content: center;
     justify-content: center;
     color: white;
-    .tabla{
-        padding: 10px;
-     }
-    .img{
-        height: 40px;
-        width: 40px;
-        padding: 10px;
-    }
- }
+}
+.tabla{
+    padding: 10px;
+}
+footer img{
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+}
 /*Area secciones*/
 .secciones{
     display: flex;
@@ -164,61 +164,59 @@ footer{
     justify-content: flex-start;
     align-content: center;
     flex-wrap: wrap;
-    .nav ul{
-        list-style: none;
-        padding: 10px;
-    }
-    .nav ul a{
-        text-decoration: none;
-        color: white
-    }
-    .nav ul li{
-        padding: 10px;
-    }
-    .p{
-        font-weight: bold;
-        color: white;
-    }
+}
+.secciones nav ul{
+    list-style: none;
+    padding: 10px;
+}
+.secciones nav ul a{
+    text-decoration: none;
+    color: white
+}
+.secciones nav ul li{
+    padding: 10px;
+}
+.secciones p{
+    font-weight: bold;
+    color: white;
 }
 /*Area form*/
 
 .form{
     padding: 10px;
     text-align: center;
-    .p{
-        padding-bottom: 10px ;
-        color: white;
-    }
-    .mail::placeholder{
-        color: $negro;
-    }
-    input[type=text]:focus {
-        transform: scale(1,1);
-        border: 3px solid blue;
-    }
-    .button{
-        padding: 15px 25px;
-        font-size: 10px;
-        font-size: 12;
-        text-align: center;
-        cursor: pointer;
-        outline: none;
-        color: #fff;
-        background-color: $negro;
-        border-color: white;
-        border-radius: 15px;
-      }
-      
-      .button:hover {background-color: $negro}
-      
-      .button:active {
-        background-color: rgb(255, 255, 255) ;
-        transform: translateY(4px);
-        color: $negro;
-      }
-    
 }
-
+.p{
+    padding-bottom: 10px ;
+    color: white;
+}
+.mail::placeholder{
+    color: $negro;
+}
+input[type=text]:focus {
+    transform: scale(1,1);
+    border: 3px solid blue;
+}
+.button{
+    padding: 15px 25px;
+    font-size: 10px;
+    font-size: 12;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: $negro;
+    border-color: white;
+    border-radius: 15px;
+}
+      
+.button:hover {background-color: $negro}
+      
+.button:active {
+    background-color: rgb(255, 255, 255) ;
+    transform: translateY(4px);
+    color: $negro;
+}
 /*Area contacto*/
 .contacto{
     display: flex;
@@ -227,16 +225,16 @@ footer{
     justify-content: flex-start;
     align-content: center;
     flex-wrap: wrap;
-    .p{
-        font-weight: bold;
-        color: white;
-    }
-    .a{
-        text-decoration: none;
-        padding: 10px;
-        color: white;
+}
+.p{
+    font-weight: bold;
+    color: white;
+}
+.contacto a{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
     
-    }
 }
 
 /*seccion musica*/
@@ -264,35 +262,35 @@ footer{
         flex-direction: column;
         background-color: $negro;
       }
-      .container {  
-        display: flex;
-        flex-direction: column;
-      }
-      .div{
+    .container {  
+       display: flex;
+       flex-direction: column;
+    }
+    .div{
+       font-size: 16px;
+    }
+    .container img{
+       width: 250px;
+       height: 150px;
+    }
+    .contenedor{  
+       display: flex;
+       flex-direction: column;
+    }
+    .contenedor div{
         font-size: 16px;
-      }
-      .container img{
+    }
+    .contenedor img{
         width: 250px;
         height: 150px;
-      }
-      .contenedor{  
-        display: flex;
-        flex-direction: column;
-      }
-      .contenedor div{
-        font-size: 16px;
-      }
-      .contenedor img{
-        width: 250px;
-        height: 150px;
-      }
-      .galeria{
+    }
+    .galeria{
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      }
-      .close{
+    }
+    .close{
         top: 20px;
         right: 20px;
-      }
+    }
     .div-noticias2 img{
         width: 250px;
         height: 150px;

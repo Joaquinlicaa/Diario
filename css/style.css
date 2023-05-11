@@ -53,9 +53,7 @@ main {
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "Grid1 Grid2 . ."
- "Grid3 Grid4 Grid5 ."
- ". . . ."; }
+    grid-template-areas: "Grid1 Grid2 . ." "Grid3 Grid4 Grid5 ." ". . . ."; }
   main .grid-1 {
     grid-area: Grid1; }
   main .grid-2 {
@@ -113,27 +111,30 @@ footer {
   background-color: #000;
   min-height: 10vh;
   color: white; }
-  footer .container-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "Redes Secciones Form Contacto"
- "Redes Secciones Form Contacto"
- "Redes Secciones Form Contacto"; }
-  footer .Secciones {
-    grid-area: Secciones; }
-  footer .Form {
-    grid-area: Form; }
-  footer .Contacto {
-    grid-area: Contacto; }
-  footer .Redes {
-    grid-area: Redes; }
-  footer .img {
-    width: 250px;
-    height: 150px; }
 
+.container-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Redes Secciones Form Contacto" "Redes Secciones Form Contacto" "Redes Secciones Form Contacto"; }
+
+.Secciones {
+  grid-area: Secciones; }
+
+.Form {
+  grid-area: Form; }
+
+.Contacto {
+  grid-area: Contacto; }
+
+.Redes {
+  grid-area: Redes; }
+
+img {
+  width: 250px;
+  height: 150px; }
 
 /*Area redes*/
 .redes {
@@ -144,12 +145,14 @@ footer {
   align-content: center;
   justify-content: center;
   color: white; }
-  .redes .tabla {
-    padding: 10px; }
-  .redes .img {
-    height: 40px;
-    width: 40px;
-    padding: 10px; }
+
+.tabla {
+  padding: 10px; }
+
+footer img {
+  height: 40px;
+  width: 40px;
+  padding: 10px; }
 
 /*Area secciones*/
 .secciones {
@@ -159,47 +162,57 @@ footer {
   justify-content: flex-start;
   align-content: center;
   flex-wrap: wrap; }
-  .secciones .nav ul {
-    list-style: none;
-    padding: 10px; }
-  .secciones .nav ul a {
-    text-decoration: none;
-    color: white; }
-  .secciones .nav ul li {
-    padding: 10px; }
-  .secciones .p {
-    font-weight: bold;
-    color: white; }
+
+.secciones nav ul {
+  list-style: none;
+  padding: 10px; }
+
+.secciones nav ul a {
+  text-decoration: none;
+  color: white; }
+
+.secciones nav ul li {
+  padding: 10px; }
+
+.secciones p {
+  font-weight: bold;
+  color: white; }
 
 /*Area form*/
 .form {
   padding: 10px;
   text-align: center; }
-  .form .p {
-    padding-bottom: 10px;
-    color: white; }
-  .form .mail::placeholder {
-    color: #000; }
-  .form input[type=text]:focus {
-    transform: scale(1, 1);
-    border: 3px solid blue; }
-  .form .button {
-    padding: 15px 25px;
-    font-size: 10px;
-    font-size: 12;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #000;
-    border-color: white;
-    border-radius: 15px; }
-  .form .button:hover {
-    background-color: #000; }
-  .form .button:active {
-    background-color: white;
-    transform: translateY(4px);
-    color: #000; }
+
+.p {
+  padding-bottom: 10px;
+  color: white; }
+
+.mail::placeholder {
+  color: #000; }
+
+input[type=text]:focus {
+  transform: scale(1, 1);
+  border: 3px solid blue; }
+
+.button {
+  padding: 15px 25px;
+  font-size: 10px;
+  font-size: 12;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #000;
+  border-color: white;
+  border-radius: 15px; }
+
+.button:hover {
+  background-color: #000; }
+
+.button:active {
+  background-color: white;
+  transform: translateY(4px);
+  color: #000; }
 
 /*Area contacto*/
 .contacto {
@@ -209,13 +222,15 @@ footer {
   justify-content: flex-start;
   align-content: center;
   flex-wrap: wrap; }
-  .contacto .p {
-    font-weight: bold;
-    color: white; }
-  .contacto .a {
-    text-decoration: none;
-    padding: 10px;
-    color: white; }
+
+.p {
+  font-weight: bold;
+  color: white; }
+
+.contacto a {
+  text-decoration: none;
+  padding: 10px;
+  color: white; }
 
 /*seccion musica*/
 .div-musica {
