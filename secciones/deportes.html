@@ -11,6 +11,11 @@
   <title>Deportes / Notis</title>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="shortcut icon" href="../recursos/Favicon.png">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
   <header class="header">
@@ -47,88 +52,89 @@
   </header>
 <main>
   <hr>
-  <h1 class="h1-index">Inicio</h1>
+  <h1 class="animate__animated animate__zoomInRight">Deportes</h1>
   <hr>
   <div class="container">
     <div class="grid-1">
       <small>Deporte</small>
-      <img class="primerafila" src="../recursos/Chelsea.avif" alt="foto Lula">
+      <img class="fila" src="../recursos/Chelsea.avif" alt="foto Lula">
       <p>La carrera por ser el nuevo DT del Chelsea: con Nagelsmann descartado, subieron las acciones de un argentino y apareció el “candidato misterioso”</p>
     </div>
     <div class="grid-2">
       <small>Deporte</small>
-      <img class="primerafila" src="../recursos/Messi (2).avif" alt="foto Messi ">
+      <img class="fila" src="../recursos/Messi (2).avif" alt="foto Messi ">
       <p>La broma de Messi que hizo reír a carcajadas a Mbappé y el drástico cambio en la relación entre ambos</p>
     </div>
     <div class="grid-3">
       <small>Deporte</small>
-      <img class="segundafila" src="../recursos/Barcelona2.avif" alt="foto Barcelona 2">
+      <img class="fila" src="../recursos/Barcelona2.avif" alt="foto Barcelona 2">
       <p>Los detalles del “Operativo Regreso”, el plan que el Barcelona puso en marcha para fichar a Lionel Messi</p>
     </div>
     <div class="grid-4">
       <small>Deporte</small>
-      <img class="segundafila" src="../recursos/Messi.avif" alt="foto Messi 2">
+      <img class="fila" src="../recursos/Messi.avif" alt="foto Messi 2">
       <p>Mientras avanza por Lionel Messi, Barcelona tendría un acuerdo de palabra con una estrella del Liverpool</p>
     </div>
     <div class="grid-5">
       <small>Deporte</small>
-      <img class="segundafila" src="../recursos/Heinz.avif" alt="foto Heinz ">
+      <img class="fila" src="../recursos/Heinz.avif" alt="foto Heinz ">
       <p>La sorpresiva actuación de Heinze con Pachu y Pablo en el spot del partido homenaje a Maxi Rodríguez: ¿irá Messi?</p>
     </div>
   </div>
 </main>
-  <footer class="footer">
-    <div class="container-footer">
-      <div class="redes">
-        <p class="seguinos">Seguinos:</p>
-        <table class="tabla">
+ <!--Footer con BEM-->
+<footer>
+  <div class="container-footer">
+    <div class="redes">
+      <p class="redes__p">Seguinos:</p>
+      <table class="redes__table">
 
-          <tr>
+        <tr>
 
-            <td><a href="https://www.instagram.com/" target="_blank"><img src="../recursos/Logo Instagram.png"></a></td>
+          <td><a href="https://www.instagram.com/" target="_blank"><img src="../recursos/Logo Instagram.png"></a></td>
 
-            <td><a href="https://www.facebook.com" target="_blank"><img src="../recursos/Logo Facebook.png"></a></td>
+          <td><a href="https://www.facebook.com" target="_blank"><img src="../recursos/Logo Facebook.png"></a></td>
 
-            <td><a href="https://www.twitter.com" target="_blank"><img src="../recursos/Logo Twitter.png"></a></td>
+          <td><a href="https://www.twitter.com" target="_blank"><img src="../recursos/Logo Twitter.png"></a></td>
 
-          </tr>
+        </tr>
 
-          <tr>
+        <tr>
 
-            <td><a href="https://www.youtube.com" target="_blank"><img src="../recursos/Logo Youtube.png"></a></td>
+          <td><a href="https://www.youtube.com" target="_blank"><img src="../recursos/Logo Youtube.png"></a></td>
 
-            <td><a href="https://www.linkedin.com" target="_blank"><img src="../recursos/Logo Linkedin.png"></a></td>
+          <td><a href="https://www.linkedin.com" target="_blank"><img src="../recursos/Logo Linkedin.png"></a></td>
 
-            <td><a href="https://www.telegram.org" target="_blank"><img src="../recursos/Logo Telegram.png"></a></td>
+          <td><a href="https://www.telegram.org" target="_blank"><img src="../recursos/Logo Telegram.png"></a></td>
 
-          </tr>
+        </tr>
 
-        </table>
-      </div>
-      <div class="secciones">
-        <p>Secciones</p>
-        <nav>
-          <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./deportes.html">Deportes</a></li>
-            <li><a href="./musica.html">Musica</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="form">
-        <p>Registrarse para recibir noticas</p>
-        <form class="form-footer" action="#" method="get"></form>
-        <input class="mail" type="text" placeholder="Email" name="Ingresa tu email" required>
-        <input class="button" type="submit" placeholder="Enviar" name="Enviar" required>
-        </form>
-      </div>
-      <div class="contacto">
-        <p>Contactenos</p>
-        <a href="mailto:licajoa@gmail.com">Contacto</a>
-        <a href="mailto:licajoa@gmail.com">Contacto Comercial</a>
-      </div>
+      </table>
     </div>
-  </footer>
+    <div class="secciones">
+      <p class="secciones__p">Secciones</p>
+      <nav class="secciones__nav">
+        <ul class="secciones__ul">
+          <li class="secciones__li"><a class="secciones__a" href="../index.html">Inicio</a</li>
+          <li class="secciones__li"><a class="secciones__a" href="../secciones/deportes.html">Deportes</a></li>
+          <li class="secciones__li"><a class="secciones__a" href="../secciones/musica.html">Musica</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="form">
+      <p class="form__p">Registrarse para recibir noticas</p>
+      <form class="form__form" action="#" method="get"></form>
+      <input class="form__input-email" type="text" placeholder="Email" name="Ingresa tu email" required>
+      <input class="form__input-button" type="submit" placeholder="Enviar" name="Enviar" required>
+      </form>
+    </div>
+    <div class="contacto">
+      <p class="contacto__p">Contactenos</p>
+      <a class="contacto__a" href="mailto:licajoa@gmail.com">Contacto</a>
+      <a class="contacto__a" href="mailto:licajoa@gmail.com">Contacto Comercial</a>
+    </div>
+  </div>
+</footer>
 </body>
 
 </html>

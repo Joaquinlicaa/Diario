@@ -4,31 +4,71 @@
   margin: 0;
   padding: 0; }
 
-/*ejemplo1*/
-.h1-ejemplo1 {
-  padding: 10px; }
+.container-img {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px;
+  grid-gap: 20px; }
 
-#carouselExampleCaptions {
+.container-img .box-img figure {
+  width: 100%;
+  height: 100%; }
+
+.container-img .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.container-img .box-img:nth-child(1) {
+  grid-column-start: span 2; }
+
+.container-img .box-img:nth-child(4) {
+  grid-column-start: span 2; }
+
+.main-ejemplo1 p {
+  font-size: 30px;
   padding: 10px;
-  width: 1000px; }
+  text-align: center; }
 
 /*ejemplo 2*/
 .div-noticias2 {
   display: flex;
   flex-direction: column;
   padding: 10px; }
-  .div-noticias2 .img {
-    width: 550px;
-    height: 350px; }
-  .div-noticias2 .p {
-    font-size: 22px; }
-  .div-noticias2 .small {
-    font-size: 15px;
-    color: #000; }
+
+.div-noticias2 img {
+  width: 550px;
+  height: 350px; }
+
+.div-noticias2 small {
+  font-size: 15px;
+  color: #000;
+  text-align: left; }
+
+.div-noticias2 p {
+  font-size: 22px;
+  text-align: left; }
+
+.div-noticias2 h1 {
+  text-align: center; }
+
+.div-noticias2 h3 {
+  text-align: center; }
+
+.animate__animated.animate__zoomInRight {
+  --animate-duration: 2s; }
+
+.animate__animated.animate__rollIn {
+  --animate-duration: 4s; }
 
 .navbar-toggler:hover {
   transform: scale(1);
-  border: lightblue 5px solid; }
+  border: red 5px solid; }
 
 .nav-link:hover {
   transform: scale(1, 1);
@@ -43,50 +83,47 @@ main {
   padding: 10px; }
   main h1 {
     text-align: center;
-    color: blue; }
+    color: #000; }
   main hr {
     width: 100%;
-    border: 3px solid blue; }
+    border: 3px solid #000; }
   main .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "Grid1 Grid2 . ." "Grid3 Grid4 Grid5 ." ". . . ."; }
+    grid-template-areas: "grid1 grid2 . ." "grid3 grid4 grid5 ." ". . . ."; }
   main .grid-1 {
-    grid-area: Grid1; }
+    grid-area: grid1; }
   main .grid-2 {
-    grid-area: Grid2; }
+    grid-area: grid2; }
   main .grid-3 {
-    grid-area: Grid3; }
+    grid-area: grid3; }
   main .grid-4 {
-    grid-area: Grid4; }
+    grid-area: grid4; }
   main .grid-5 {
-    grid-area: Grid5; }
+    grid-area: grid5; }
   main .container div {
     padding: 20px;
     text-align: left;
     font-size: 18px;
     font-weight: bold; }
-  main .primerafila {
-    width: 450px;
-    height: 300px; }
-  main .segundafila {
-    width: 300px;
+  main .fila {
+    width: 350px;
     height: 200px; }
-  main .grid-1 img {
-    width: 350px;
-    height: 250px; }
-  main .grid-2 img {
-    width: 350px;
-    height: 250px; }
   main .grid-1 a {
     text-decoration: none;
     color: #000; }
   main .grid-2 a {
     text-decoration: none;
     color: #000; }
+  main .grid-1 p {
+    color: red;
+    font-weight: bold; }
+  main .grid-2 p {
+    color: red;
+    font-weight: bold; }
   main .grid-1 {
     display: flex;
     flex-direction: column; }
@@ -105,10 +142,10 @@ main {
   main small {
     color: darkblue; }
 
-/*Footer*/
+/*Footer con BEM*/
 /*Grid*/
 footer {
-  background-color: #000;
+  background: linear-gradient(to top, #000, grey);
   min-height: 10vh;
   color: white; }
 
@@ -119,18 +156,18 @@ footer {
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "Redes Secciones Form Contacto" "Redes Secciones Form Contacto" "Redes Secciones Form Contacto"; }
-
-.Secciones {
-  grid-area: Secciones; }
-
-.Form {
-  grid-area: Form; }
-
-.Contacto {
-  grid-area: Contacto; }
-
-.Redes {
-  grid-area: Redes; }
+  .container-footer .Secciones {
+    grid-area: Secciones; }
+  .container-footer .Form {
+    grid-area: Form; }
+  .container-footer .Contacto {
+    grid-area: Contacto; }
+  .container-footer .Redes {
+    grid-area: Redes; }
+  .container-footer img {
+    height: 40px;
+    width: 40px;
+    padding: 10px; }
 
 /*Area redes*/
 .redes {
@@ -141,14 +178,8 @@ footer {
   align-content: center;
   justify-content: center;
   color: white; }
-
-.tabla {
-  padding: 10px; }
-
-footer img {
-  height: 40px;
-  width: 40px;
-  padding: 10px; }
+  .redes .redes__table {
+    padding: 10px; }
 
 /*Area secciones*/
 .secciones {
@@ -157,58 +188,51 @@ footer img {
   align-items: center;
   justify-content: flex-start;
   align-content: center;
-  flex-wrap: wrap; }
-
-.secciones nav ul {
-  list-style: none;
-  padding: 10px; }
-
-.secciones nav ul a {
-  text-decoration: none;
-  color: white; }
-
-.secciones nav ul li {
-  padding: 10px; }
-
-.secciones p {
-  font-weight: bold;
-  color: white; }
+  flex-wrap: wrap;
+  padding-left: 10px; }
+  .secciones .secciones__ul {
+    list-style: none;
+    padding: 10px; }
+  .secciones .secciones__a {
+    text-decoration: none;
+    color: white; }
+  .secciones .secciones__li {
+    padding: 10px; }
+  .secciones .secciones__li:hover {
+    font-weight: bold; }
+  .secciones .secciones__p {
+    font-weight: bold;
+    color: white; }
 
 /*Area form*/
 .form {
   padding: 10px;
   text-align: center; }
-
-.p {
-  padding-bottom: 10px;
-  color: white; }
-
-.mail::placeholder {
-  color: #000; }
-
-input[type=text]:focus {
-  transform: scale(1, 1);
-  border: 3px solid blue; }
-
-.button {
-  padding: 15px 25px;
-  font-size: 10px;
-  font-size: 12;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #000;
-  border-color: white;
-  border-radius: 15px; }
-
-.button:hover {
-  background-color: #000; }
-
-.button:active {
-  background-color: white;
-  transform: translateY(4px);
-  color: #000; }
+  .form .form__p {
+    padding-bottom: 10px;
+    color: white; }
+  .form .mail::placeholder {
+    color: #000; }
+  .form .form__input-email[type=text]:focus {
+    transform: scale(1, 1);
+    border: 3px solid blue; }
+  .form .form__input-button {
+    padding: 15px 25px;
+    font-size: 10px;
+    font-size: 12;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #000;
+    border-color: grey;
+    border-radius: 15px; }
+  .form .form__input-button:hover {
+    background-color: #000; }
+  .form .form__input-button:active {
+    background-color: black;
+    transform: translateY(4px);
+    color: white; }
 
 /*Area contacto*/
 .contacto {
@@ -218,15 +242,15 @@ input[type=text]:focus {
   justify-content: flex-start;
   align-content: center;
   flex-wrap: wrap; }
-
-.p {
-  font-weight: bold;
-  color: white; }
-
-.contacto a {
-  text-decoration: none;
-  padding: 10px;
-  color: white; }
+  .contacto .contacto__p {
+    font-weight: bold;
+    color: white; }
+  .contacto .contacto__a {
+    text-decoration: none;
+    padding: 10px;
+    color: white; }
+  .contacto .contacto__a :hover {
+    font-weight: bold; }
 
 /*seccion musica*/
 .div-musica {
@@ -235,46 +259,34 @@ input[type=text]:focus {
     width: 600px;
     height: 400px;
     padding: 10px; }
-    .div-musica .img:hover {
-      transform: scale(0, 9); }
-  .div-musica .p {
-    font-size: 30px;
-    font-weight: bold;
-    padding: 10px; }
+
+.div-musica p {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px; }
 
 @media (max-width: 768px) {
+  main hr {
+    border: 2px solid blue; }
+  main .container {
+    display: flex;
+    flex-direction: column; }
+  main .container div {
+    font-size: 14px; }
+  main .fila {
+    width: 250px;
+    height: 150px; }
+  /*Footer*/
   .container-footer {
     display: flex;
     flex-direction: column;
     background-color: #000; }
-  .container {
+  .secciones {
     display: flex;
-    flex-direction: column; }
-  .div {
-    font-size: 16px; }
-  .container img {
-    width: 250px;
-    height: 150px; }
-  .contenedor {
+    flex-direction: row; }
+  .secciones__ul {
     display: flex;
-    flex-direction: column; }
-  .contenedor div {
-    font-size: 16px; }
-  .contenedor img {
-    width: 250px;
-    height: 150px; }
-  .galeria {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-  .close {
-    top: 20px;
-    right: 20px; }
-  .div-noticias2 img {
-    width: 250px;
-    height: 150px; }
-  .div-noticias2 p {
-    font-size: 16px; }
-  .div-noticias2 small {
-    font-size: 8px; }
+    flex-direction: row; }
   .div-musica {
     flex-direction: column; }
   .div-musica img {
@@ -282,4 +294,11 @@ input[type=text]:focus {
     height: 200px; }
   .div-musica p {
     font-size: 16px;
-    font-weight: none; } }
+    font-weight: none; }
+  .container-img {
+    display: flex;
+    flex-direction: column; }
+  .box-img img {
+    width: 250px;
+    height: 150px;
+    padding: 10px; } }

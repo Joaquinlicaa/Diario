@@ -4,10 +4,11 @@
 @import './recursos/reset';
 @import './recursos/ejemplo1.scss';
 @import './recursos/ejemplo2.scss';
+@import './recursos/animaciones.scss';
 
 .navbar-toggler:hover{
     transform: scale(1);
-    border: lightblue 5px solid ;
+    border: red 5px solid ;
 }
 .nav-link:hover{
     transform: scale(1,1);
@@ -22,11 +23,11 @@ main{
     padding: 10px;
     h1{
         text-align: center;
-        color: blue;
+        color: $negro;
     }
     hr{
         width: 100%;
-        border: 3px solid blue;
+        border: 3px solid $negro;
     }
     .container{  
         display: grid;
@@ -35,19 +36,19 @@ main{
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-          "Grid1 Grid2 . ."
-          "Grid3 Grid4 Grid5 ."
+          "grid1 grid2 . ."
+          "grid3 grid4 grid5 ."
           ". . . .";
       }
-      .grid-1 { grid-area: Grid1; }
+      .grid-1 { grid-area: grid1; }
   
-      .grid-2 { grid-area: Grid2; }
+      .grid-2 { grid-area: grid2; }
       
-      .grid-3 { grid-area: Grid3; }
+      .grid-3 { grid-area: grid3; }
       
-      .grid-4 { grid-area: Grid4; }
+      .grid-4 { grid-area: grid4; }
       
-      .grid-5 { grid-area: Grid5; }
+      .grid-5 { grid-area: grid5; }
     
     .container div{
     padding: 20px;
@@ -55,23 +56,10 @@ main{
     font-size: 18px;
     font-weight: bold;
     }
-    .primerafila{
-        width: 450px;
-        height: 300px;
-    }
-    .segundafila{
-        width: 300px;
+    .fila{
+        width: 350px;
         height: 200px;
     }
-    .grid-1 img{
-        width: 350px;
-        height: 250px;
-    }
-    .grid-2 img{
-        width: 350px;
-        height: 250px;
-    }
-    
     .grid-1 a{
         text-decoration: none;
         color: $negro;
@@ -79,6 +67,14 @@ main{
     .grid-2 a{
         text-decoration: none;
         color: $negro;
+    }
+    .grid-1 p{
+        color: red;
+        font-weight: bold;
+    }
+    .grid-2 p{
+        color: red;
+        font-weight: bold;
     }
     
     .grid-1{
@@ -102,16 +98,15 @@ main{
         flex-direction: column;
     }
     small {
-        color: darkblue; }
-      
-
+        color: darkblue; 
+    }
 }
 
-/*Footer*/
+/*Footer con BEM*/
 /*Grid*/
 
 footer{
-    background-color: $negro;
+    background: linear-gradient(to top, $negro, grey);
     min-height: 10vh;
     color: white;
 }
@@ -125,15 +120,19 @@ footer{
     "Redes Secciones Form Contacto"
     "Redes Secciones Form Contacto"
     "Redes Secciones Form Contacto";
+    .Secciones { grid-area: Secciones; }
+      
+    .Form { grid-area: Form; }
+      
+    .Contacto { grid-area: Contacto; }
+      
+    .Redes { grid-area: Redes; }
+    img{
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+    }
 }
-
-.Secciones { grid-area: Secciones; }
-      
-.Form { grid-area: Form; }
-      
-.Contacto { grid-area: Contacto; }
-      
-.Redes { grid-area: Redes; } 
 
 /*Area redes*/
 .redes{
@@ -144,15 +143,11 @@ footer{
     align-content: center;
     justify-content: center;
     color: white;
+    .redes__table{
+        padding: 10px;
+    }
 }
-.tabla{
-    padding: 10px;
-}
-footer img{
-    height: 40px;
-    width: 40px;
-    padding: 10px;
-}
+
 /*Area secciones*/
 .secciones{
     display: flex;
@@ -161,59 +156,64 @@ footer img{
     justify-content: flex-start;
     align-content: center;
     flex-wrap: wrap;
-}
-.secciones nav ul{
-    list-style: none;
-    padding: 10px;
-}
-.secciones nav ul a{
-    text-decoration: none;
-    color: white
-}
-.secciones nav ul li{
-    padding: 10px;
-}
-.secciones p{
-    font-weight: bold;
-    color: white;
+    padding-left: 10px;
+    .secciones__ul{
+        list-style: none;
+        padding: 10px;
+    }
+    .secciones__a{
+        text-decoration: none;
+        color: white
+    }
+    .secciones__li{
+        padding: 10px;
+    }
+    .secciones__li:hover{
+        font-weight: bold;
+    }
+    .secciones__p{
+        font-weight: bold;
+        color: white;
+    }
 }
 /*Area form*/
 
 .form{
     padding: 10px;
     text-align: center;
+    .form__p{
+        padding-bottom: 10px ;
+        color: white;
+    }
+    .mail::placeholder{
+        color: $negro;
+    }
+    .form__input-email[type=text]:focus {
+        transform: scale(1,1);
+        border: 3px solid blue;
+    }
+    .form__input-button{
+        padding: 15px 25px;
+        font-size: 10px;
+        font-size: 12;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: $negro;
+        border-color: grey;
+        border-radius: 15px;
+    }
+          
+    .form__input-button:hover {background-color: $negro}
+          
+    .form__input-button:active {
+        background-color: black;
+        transform: translateY(4px);
+        color: white;
+    }
 }
-.p{
-    padding-bottom: 10px ;
-    color: white;
-}
-.mail::placeholder{
-    color: $negro;
-}
-input[type=text]:focus {
-    transform: scale(1,1);
-    border: 3px solid blue;
-}
-.button{
-    padding: 15px 25px;
-    font-size: 10px;
-    font-size: 12;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: $negro;
-    border-color: white;
-    border-radius: 15px;
-}
-      
-.button:hover {background-color: $negro}
-      
-.button:active {
-    background-color: rgb(255, 255, 255) ;
-    transform: translateY(4px);
-    color: $negro;
-}
+
 /*Area contacto*/
 .contacto{
     display: flex;
@@ -222,81 +222,67 @@ input[type=text]:focus {
     justify-content: flex-start;
     align-content: center;
     flex-wrap: wrap;
+    .contacto__p{
+        font-weight: bold;
+        color: white;
+    }
+    .contacto__a{
+        text-decoration: none;
+        padding: 10px;
+        color: white;
+    }
+    .contacto__a :hover{
+        font-weight: bold;
+    }
 }
-.p{
-    font-weight: bold;
-    color: white;
-}
-.contacto a{
-    text-decoration: none;
-    padding: 10px;
-    color: white;
-    
-}
+
 
 /*seccion musica*/
 .div-musica{
     display: flex;
-.img{
-    width: 600px;
-    height: 400px;
-    padding: 10px;
-    &:hover{
-        transform: scale(0,9);
+    .img{
+        width: 600px;
+        height: 400px;
+        padding: 10px;
     }
+    
 }
-.p{
+.div-musica p{
     font-size: 30px;
     font-weight: bold;
     padding: 10px;
 }
-}
+
+
+
 
 
 @media (max-width:768px){
+      main hr {
+        border: 2px solid blue; }
+      main .container {
+        display: flex;
+        flex-direction: column;
+       }
+      main .container div {
+        font-size: 14px;
+     }
+      main .fila {
+        width: 250px;
+        height: 150px; }
+        /*Footer*/
     .container-footer {  
         display: flex;
         flex-direction: column;
         background-color: $negro;
       }
-    .container {  
-       display: flex;
-       flex-direction: column;
+    .secciones{
+        display: flex;
+        flex-direction: row;
     }
-    .div{
-       font-size: 16px;
-    }
-    .container img{
-       width: 250px;
-       height: 150px;
-    }
-    .contenedor{  
-       display: flex;
-       flex-direction: column;
-    }
-    .contenedor div{
-        font-size: 16px;
-    }
-    .contenedor img{
-        width: 250px;
-        height: 150px;
-    }
-    .galeria{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    .close{
-        top: 20px;
-        right: 20px;
-    }
-    .div-noticias2 img{
-        width: 250px;
-        height: 150px;
-    }
-    .div-noticias2 p{
-        font-size: 16px;
-    }
-    .div-noticias2 small{
-        font-size: 8px;
+    .secciones__ul{
+        display: flex;
+        flex-direction: row;
     }
     .div-musica{
         flex-direction: column;
@@ -309,6 +295,17 @@ input[type=text]:focus {
         font-size: 16px;
         font-weight: none;
     }
+    .container-img{
+       display: flex;
+       flex-direction: column;
+    }
+    .box-img img{
+        width: 250px;
+        height: 150px;
+        padding: 10px;
+    }
 }
+
+    
 
 

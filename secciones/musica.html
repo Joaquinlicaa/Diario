@@ -11,6 +11,11 @@
   <title>Musica / Notis</title>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="shortcut icon" href="../recursos/Favicon.png">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
   <header class="header">
@@ -47,7 +52,7 @@
   </header>
 <main class="main-musica">
   <hr>
-  <h1 class="h1-index">Inicio</h1>
+  <h1 class="animate__animated animate__zoomInRight">Musica</h1>
   <hr>
     <div class="div-musica">
         <img src="../recursos/Bizarrap.jpg" alt="foto Bizarrap">
@@ -56,7 +61,6 @@
     <div class="div-musica">
         <img src="../recursos/Spotify.jpg" alt="foto Spotify">
         <p>Spotify reportó fallas en la aplicación</p>
-
     </div>
     <div class="div-musica">
         <img src="../recursos/Phontana.jpg" alt="foto Phontana">
@@ -71,58 +75,59 @@
         <p>Se definieron los nominados de los Premios Gardel 2023</p>
     </div>
 </main>
-<footer class="footer">
-    <div class="container-footer">
-      <div class="redes">
-        <p class="seguinos">Seguinos:</p>
-        <table class="tabla">
+<!--Footer con BEM-->
+<footer>
+  <div class="container-footer">
+    <div class="redes">
+      <p class="redes__p">Seguinos:</p>
+      <table class="redes__table">
 
-          <tr>
+        <tr>
 
-            <td><a href="https://www.instagram.com/" target="_blank"><img src="../recursos/Logo Instagram.png"></a></td>
+          <td><a href="https://www.instagram.com/" target="_blank"><img src="../recursos/Logo Instagram.png"></a></td>
 
-            <td><a href="https://www.facebook.com" target="_blank"><img src="../recursos/Logo Facebook.png"></a></td>
+          <td><a href="https://www.facebook.com" target="_blank"><img src="../recursos/Logo Facebook.png"></a></td>
 
-            <td><a href="https://www.twitter.com" target="_blank"><img src="../recursos/Logo Twitter.png"></a></td>
+          <td><a href="https://www.twitter.com" target="_blank"><img src="../recursos/Logo Twitter.png"></a></td>
 
-          </tr>
+        </tr>
 
-          <tr>
+        <tr>
 
-            <td><a href="https://www.youtube.com" target="_blank"><img src="../recursos/Logo Youtube.png"></a></td>
+          <td><a href="https://www.youtube.com" target="_blank"><img src="../recursos/Logo Youtube.png"></a></td>
 
-            <td><a href="https://www.linkedin.com" target="_blank"><img src="../recursos/Logo Linkedin.png"></a></td>
+          <td><a href="https://www.linkedin.com" target="_blank"><img src="../recursos/Logo Linkedin.png"></a></td>
 
-            <td><a href="https://www.telegram.org" target="_blank"><img src="../recursos/Logo Telegram.png"></a></td>
+          <td><a href="https://www.telegram.org" target="_blank"><img src="../recursos/Logo Telegram.png"></a></td>
 
-          </tr>
+        </tr>
 
-        </table>
-      </div>
-      <div class="secciones">
-        <p>Secciones</p>
-        <nav>
-          <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./secciones/deportes.html">Deportes</a></li>
-            <li><a href="./musica.html">Musica</a></li>
-
-          </ul>
-        </nav>
-      </div>
-      <div class="form">
-        <p>Registrarse para recibir noticas</p>
-        <form class="form-footer" action="#" method="get"></form>
-        <input class="mail" type="text" placeholder="Email" name="Ingresa tu email" required>
-        <input class="button" type="submit" placeholder="Enviar" name="Enviar" required>
-        </form>
-      </div>
-      <div class="contacto">
-        <p>Contactenos</p>
-        <a href="mailto:licajoa@gmail.com">Contacto</a>
-        <a href="mailto:licajoa@gmail.com">Contacto Comercial</a>
-      </div>
+      </table>
     </div>
-  </footer>
+    <div class="secciones">
+      <p class="secciones__p">Secciones</p>
+      <nav class="secciones__nav">
+        <ul class="secciones__ul">
+          <li class="secciones__li"><a class="secciones__a" href="../index.html">Inicio</a</li>
+          <li class="secciones__li"><a class="secciones__a" href="../secciones/deportes.html">Deportes</a></li>
+          <li class="secciones__li"><a class="secciones__a" href="../secciones/musica.html">Musica</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="form">
+      <p class="form__p">Registrarse para recibir noticas</p>
+      <form class="form__form" action="#" method="get"></form>
+      <input class="form__input-email" type="text" placeholder="Email" name="Ingresa tu email" required>
+      <input class="form__input-button" type="submit" placeholder="Enviar" name="Enviar" required>
+      </form>
+    </div>
+    <div class="contacto">
+      <p class="contacto__p">Contactenos</p>
+      <a class="contacto__a" href="mailto:licajoa@gmail.com">Contacto</a>
+      <a class="contacto__a" href="mailto:licajoa@gmail.com">Contacto Comercial</a>
+    </div>
+  </div>
+</footer>
 </body>
+
 </html>

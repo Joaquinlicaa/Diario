@@ -11,6 +11,11 @@
   <title>Inicio /  Notis</title>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="./recursos/Favicon.png">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 
 <body>
@@ -48,41 +53,45 @@
   </header>
 <main>
   <hr>
-  <h1>Inicio</h1>
+  <h1 class="animate__animated animate__zoomInRight ">Inicio</h1>
   <hr>
   <div class="container">
     <div class="grid-1">
+      <p class="animate__animated animate__rollIn" class="ultima-noticia">ULTIMA NOTICA</p>
       <small>Sociedad</small>
-      <a href="./secciones/ejemplo1.html" target="_blank"><img src="./recursos/MadreTierra.jpg"></a>
-      <a href="./secciones/ejemplo1.html">Día Mundial de la Madre Tierra: los impactantes paisajes del planeta, en fotos</a>
+      <a href="./secciones/ejemplo1.html" target="_blank"><img class="fila" src="./recursos/MadreTierra.jpg"></a>
+      <a href="./secciones/ejemplo1.html" target="_blank">Día Mundial de la Madre Tierra: los impactantes paisajes del planeta, en fotos</a>
     </div>
     <div class="grid-2">
+      <p class="animate__animated animate__rollIn" class="ultima-noticia">ULTIMA NOTICA</p>
       <small>Politica</small>
-      <a href="./secciones/ejemplo2.html" target="_blank"><img src="./recursos/Evan Gershkovich.avif"></a>
-      <a href="./secciones/ejemplo2.html">Rusia acusó de “espionaje” al periodista estadounidense Evan Gershkovich y podría condenarlo con hasta 20 años de cárcel</a>
+      <a href="./secciones/ejemplo2.html" target="_blank"><img class="fila" src="./recursos/Evan Gershkovich.avif"></a>
+      <a href="./secciones/ejemplo2.html" target="_blank">Rusia acusó de “espionaje” al periodista estadounidense Evan Gershkovich y podría condenarlo con hasta 20 años de cárcel</a>
     </div>
     <div class="grid-3">
       <small>Sociedad</small>
-      <img class="segundafila" src="./recursos/Kicillof.avif" alt="foto Kicillof">
+      <img class="fila" src="./recursos/Kicillof.avif" alt="foto Kicillof">
       <p>Prat Gay propuso denunciar penalmente a Kicillof por los juicios perdidos en el exterior</p>
     </div>
     <div class="grid-4">
         <small>Sociedad</small>
-        <img class="segundafila" src="./recursos/Papa.jpg" alt="foto Papa">
+        <img class="fila" src="./recursos/Papa.jpg" alt="foto Papa">
         <p>El papa Francisco encabezó la celebración de la Pasión del Señor en la Basílica de San Pedro pero no presencia el Vía Crucis</p>
     </div>
     <div class="grid-5">
       <small>Sociedad</small>
-      <img class="segundafila" src="./recursos/Triatleta.jpg" alt="foto trialtleta">
+      <img class="fila" src="./recursos/Triatleta.jpg" alt="foto trialtleta">
       <p>“¿Pensás que no tengo pelotas para pelearme con vos?”: la violenta detención de un triatleta que circulaba en bicicleta por la Ruta 11</p>
     </div>
   </div>
 </main>
+
+<!--Footer con BEM-->
 <footer>
   <div class="container-footer">
     <div class="redes">
-      <p class="seguinos">Seguinos:</p>
-      <table class="tabla">
+      <p class="redes__p">Seguinos:</p>
+      <table class="redes__table">
 
         <tr>
 
@@ -107,26 +116,26 @@
       </table>
     </div>
     <div class="secciones">
-      <p>Secciones</p>
-      <nav>
-        <ul>
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="./secciones/deportes.html">Deportes</a></li>
-          <li><a href="./secciones/musica.html">Musica</a></li>
+      <p class="secciones__p">Secciones</p>
+      <nav class="secciones__nav">
+        <ul class="secciones__ul">
+          <li class="secciones__li"><a class="secciones__a" href="./index.html">Inicio</a</li>
+          <li class="secciones__li"><a class="secciones__a" href="./secciones/deportes.html">Deportes</a></li>
+          <li class="secciones__li"><a class="secciones__a" href="./secciones/musica.html">Musica</a></li>
         </ul>
       </nav>
     </div>
     <div class="form">
-      <p>Registrarse para recibir noticas</p>
-      <form class="form-footer" action="#" method="get"></form>
-      <input class="mail" type="text" placeholder="Email" name="Ingresa tu email" required>
-      <input class="button" type="submit" placeholder="Enviar" name="Enviar" required>
+      <p class="form__p">Registrarse para recibir noticas</p>
+      <form class="form__form" action="#" method="get"></form>
+      <input class="form__input-email" type="text" placeholder="Email" name="Ingresa tu email" required>
+      <input class="form__input-button" type="submit" placeholder="Enviar" name="Enviar" required>
       </form>
     </div>
     <div class="contacto">
-      <p>Contactenos</p>
-      <a href="mailto:licajoa@gmail.com">Contacto</a>
-      <a href="mailto:licajoa@gmail.com">Contacto Comercial</a>
+      <p class="contacto__p">Contactenos</p>
+      <a class="contacto__a" href="mailto:licajoa@gmail.com">Contacto</a>
+      <a class="contacto__a" href="mailto:licajoa@gmail.com">Contacto Comercial</a>
     </div>
   </div>
 </footer>

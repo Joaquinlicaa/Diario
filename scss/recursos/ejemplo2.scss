@@ -3,15 +3,23 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    .img{
-        width: 550px;
-        height: 350px;
-    }
-    .p{
-        font-size: 22px;
-    }
-    .small{
-        font-size: 15px;
-        color: $negro;
-    }
+}
+.div-noticias2 img {
+    width: 550px;
+    height: 350px;
+}
+.div-noticias2 small{
+    font-size: 15px;
+    color: $negro;
+    text-align: left;
+}
+.div-noticias2 p{
+    font-size: 22px;
+    text-align: left;
+}
+.div-noticias2 h1{
+    text-align: center;
+}
+.div-noticias2 h3{
+    text-align: center;
 }
