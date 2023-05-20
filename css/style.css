@@ -41,34 +41,41 @@
   flex-direction: column;
   padding: 10px; }
 
-.div-noticias2 img {
+.div-img-ejemplo2 {
   width: 550px;
-  height: 350px; }
+  height: 350px;
+  padding: 10px;
+  overflow: hidden; }
+
+.div-img-ejemplo2 img {
+  height: 100%; }
 
 .div-noticias2 small {
   font-size: 15px;
   color: #000;
-  text-align: left; }
+  text-align: left;
+  max-width: 70%; }
 
 .div-noticias2 p {
   font-size: 22px;
-  text-align: left; }
+  text-align: left;
+  max-width: 70%; }
 
 .div-noticias2 h1 {
   text-align: center; }
 
 .div-noticias2 h3 {
-  text-align: center; }
+  max-width: 70%; }
 
 .animate__animated.animate__zoomInRight {
   --animate-duration: 2s; }
 
-.animate__animated.animate__rollIn {
-  --animate-duration: 4s; }
+.animate__animated.animate__backInUp {
+  --animate-duration: 1s; }
 
 .navbar-toggler:hover {
   transform: scale(1);
-  border: red 5px solid; }
+  border: blue 5px solid; }
 
 .nav-link:hover {
   transform: scale(1, 1);
@@ -77,10 +84,12 @@
 .header {
   min-height: 20vh; }
 
+.navbar {
+  height: 20vh; }
+
 /*Body*/
 main {
-  min-height: 70vh;
-  padding: 10px; }
+  min-height: 70vh; }
   main h1 {
     text-align: center;
     color: #000; }
@@ -105,13 +114,16 @@ main {
   main .grid-5 {
     grid-area: grid5; }
   main .container div {
-    padding: 20px;
+    padding: 10px;
     text-align: left;
     font-size: 18px;
-    font-weight: bold; }
-  main .fila {
+    font-weight: bold;
+    width: 100%; }
+  main .div-img-index {
     width: 350px;
-    height: 200px; }
+    height: 200px;
+    overflow: hidden;
+    width: 100%; }
   main .grid-1 a {
     text-decoration: none;
     color: #000; }
@@ -119,26 +131,31 @@ main {
     text-decoration: none;
     color: #000; }
   main .grid-1 p {
-    color: red;
+    color: black;
     font-weight: bold; }
-  main .grid-2 p {
-    color: red;
+  main .ultimanoticia {
+    color: black;
     font-weight: bold; }
   main .grid-1 {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 100%; }
   main .grid-2 {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 100%; }
   main .grid-3 {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 100%; }
   main .grid-4 {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 100%; }
   main .grid-5 {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 100%; }
   main small {
     color: darkblue; }
 
@@ -254,16 +271,24 @@ footer {
 
 /*seccion musica*/
 .div-musica {
-  display: flex; }
-  .div-musica .img {
-    width: 600px;
-    height: 400px;
-    padding: 10px; }
+  display: flex;
+  width: 100%; }
 
 .div-musica p {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
-  padding: 10px; }
+  padding: 10px;
+  max-width: 100%; }
+
+.div-img-musica {
+  width: 600px;
+  height: 400px;
+  padding: 10px;
+  overflow: hidden; }
+
+.div-img-musica img {
+  height: 100%;
+  width: 100%; }
 
 @media (max-width: 768px) {
   main hr {
@@ -273,7 +298,7 @@ footer {
     flex-direction: column; }
   main .container div {
     font-size: 14px; }
-  main .fila {
+  main .div-img-index {
     width: 250px;
     height: 150px; }
   /*Footer*/
@@ -287,11 +312,14 @@ footer {
   .secciones__ul {
     display: flex;
     flex-direction: row; }
+  /*Musica*/
   .div-musica {
     flex-direction: column; }
-  .div-musica img {
-    width: 300px;
-    height: 200px; }
+  .div-img-musica {
+    width: 250px;
+    height: 150px; }
+  .div-img-musica img {
+    object-fit: cover; }
   .div-musica p {
     font-size: 16px;
     font-weight: none; }
@@ -301,4 +329,17 @@ footer {
   .box-img img {
     width: 250px;
     height: 150px;
-    padding: 10px; } }
+    padding: 10px; }
+  /*Ejemplo2*/
+  .div-img-ejemplo2 {
+    width: 250px;
+    height: 150px; }
+  .div-noticias2 small {
+    font-size: 14px;
+    max-width: 100%; }
+  .div-noticias2 p {
+    font-size: 16px;
+    text-align: left;
+    max-width: 100%; }
+  .div-noticias2 h3 {
+    max-width: 100%; } }

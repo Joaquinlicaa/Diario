@@ -4,22 +4,29 @@
     flex-direction: column;
     padding: 10px;
 }
-.div-noticias2 img {
+.div-img-ejemplo2{
     width: 550px;
     height: 350px;
+    padding: 10px;
+    overflow: hidden;
+}
+.div-img-ejemplo2 img{
+    height: 100%;
 }
 .div-noticias2 small{
     font-size: 15px;
     color: $negro;
     text-align: left;
+    max-width: 70%;
 }
 .div-noticias2 p{
     font-size: 22px;
     text-align: left;
+    max-width: 70%;
 }
 .div-noticias2 h1{
     text-align: center;
 }
 .div-noticias2 h3{
-    text-align: center;
+    max-width: 70%;
 }
